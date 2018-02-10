@@ -8,7 +8,6 @@
   },
   "scripts": {
     "test": "standard",
-    "pretest": "npm run build",
     "build": "babel src --out-dir=dist",
     "prepublish": "npm run build"
   },
