@@ -1,0 +1,69 @@
+{
+  "name": "onion-cli",
+  "version": "1.0.0",
+  "description": "onion tools",
+  "main": "dist/index.js",
+  "bin": {
+    "onion": "dist/index.js"
+  },
+  "scripts": {
+    "test": "standard",
+    "pretest": "npm run build",
+    "build": "babel src --out-dir=dist",
+    "prepublish": "npm run build"
+  },
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h",
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
+  "ava": {
+    "babel": {
+      "presets": [
+        "@ava/stage-4"
+      ],
+      "plugins": [
+        [
+          "transform-react-jsx",
+          {
+            "pragma": "h",
+            "useBuiltIns": true
+          }
+        ]
+      ]
+    }
+  },
+  "author": "hzq",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "chalk": "^2.3.0",
+    "commander": "^2.14.1",
+    "copy-paste": "^1.3.0",
+    "ink": "^0.4.1",
+    "inquirer": "^5.1.0",
+    "ip": "^1.1.5",
+    "js-yaml": "^3.10.0",
+    "meow": "^4.0.0",
+    "ramda": "^0.25.0",
+    "read-pkg-up": "^3.0.0",
+    "rxjs": "^5.5.6"
+  }
+}
