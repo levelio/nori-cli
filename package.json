@@ -5,7 +5,7 @@
   "repository": "https://github.com/Simlesos/onion-cli",
   "main": "src/index.js",
   "bin": {
-    "onion-cli": "src/index.js"
+    "onion": "src/index.js"
   },
   "scripts": {
     "test": "standard",
