@@ -14,7 +14,7 @@ exports.copyText = function (text) {
   })
 }
 
-exports.write = text => process.stdout.write(text)
+exports.write = text => process.stdout.write(`${text}\n`)
 
 exports.Text = {
   error: text => this.write(chalk.red(text)),
