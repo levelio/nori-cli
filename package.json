@@ -4,7 +4,7 @@
   "description": "onion tools",
   "main": "src/index.js",
   "bin": {
-    "onion": "dist/index.js"
+    "onion-cli": "src/index.js"
   },
   "scripts": {
     "test": "standard",
