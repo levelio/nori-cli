@@ -5,10 +5,11 @@
 
 ## 使用
 ```
-$ onion -v
-$ onion -h
-$ onion color -h
-$ onion ip -h
+$ npm i -g nori-cli
+$ nori -v
+$ nori -h
+$ nori color -h
+$ nori ip -h
 ```
 
 ## 功能列表
