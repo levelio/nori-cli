@@ -4,7 +4,7 @@ const { has, when } = require('ramda')
 
 const welcome = require('./welecome')
 const commands = require('./commands')
-const pkg = readPkgUp.sync()
+const pkg = readPkgUp.sync().pkg
 
 program
   .version(pkg.version)
@@ -21,7 +21,6 @@ const hello = when(
 
 hello(program)
 
-//   ${chalk.blue('Commands')}
 //     user         获取测试环境用户信息
 //     ip           获取本机 IP 地址
 //     www          指定目录启动本地服务

@@ -2,7 +2,7 @@
   "name": "onion-cli",
   "version": "1.0.0",
   "description": "onion tools",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "bin": {
     "onion": "dist/index.js"
   },
@@ -14,17 +14,6 @@
   "standard": {
     "ignore": [
       "dist/*"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      [
-        "transform-react-jsx",
-        {
-          "pragma": "h",
-          "useBuiltIns": true
-        }
-      ]
     ]
   },
   "ava": {
