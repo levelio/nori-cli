@@ -1,11 +1,15 @@
 {
-  "name": "onion-cli",
+  "name": "nori-cli",
   "version": "1.0.0",
-  "description": "onion cli",
-  "repository": "https://github.com/Simlesos/onion-cli",
+  "description": "整理一些工作中常用的命令",
+  "repository": "https://github.com/Simlesos/nori-cli",
+  "keywords": [
+    "nori",
+    "cli"
+  ],
   "main": "src/index.js",
   "bin": {
-    "onion": "src/index.js"
+    "nori": "src/index.js"
   },
   "scripts": {
     "test": "standard",
@@ -33,7 +37,7 @@
       ]
     }
   },
-  "author": "hzq",
+  "author": "zhiqiang@guanghe.tv",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",

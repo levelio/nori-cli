@@ -8,14 +8,14 @@ const pkg = readPkgUp.sync().pkg
 
 program
   .version(pkg.version)
-  .option('-w, --welcome-onion', 'welcome onion')
+  .option('-w, --welcome-nori-cli', 'welcome nori-cli')
 
 commands(program)
 
 program.parse(process.argv)
 
 const hello = when(
-  has('welcomeOnion'),
+  has('welcomeNoriCli'),
   welcome
 )
 
