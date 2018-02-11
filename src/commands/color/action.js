@@ -2,7 +2,7 @@ const colorString = require('color-string')
 const { Text, write, exit } = require('../../utils')
 const chalk = require('chalk')
 
-module.exports = colorInput => {
+module.exports = (colorInput = '') => {
   const colorInfo = colorString.get(colorInput)
   if (!colorInfo) {
     Text.error('请输入正确的色彩格式')
