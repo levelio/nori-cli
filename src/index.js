@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander')
 const readPkgUp = require('read-pkg-up')
 const { has, when } = require('ramda')

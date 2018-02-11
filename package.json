@@ -14,7 +14,7 @@
   "scripts": {
     "test": "standard",
     "prepublish": "npm run test",
-    "install": "node ./npm/install"
+    "postinstall": "node ./npm/install"
   },
   "standard": {
     "ignore": [
