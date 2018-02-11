@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const readPkgUp = require('read-pkg-up')
 const { has, when } = require('ramda')
 
 const welcome = require('./welecome')
 const commands = require('./commands')
-const pkg = readPkgUp.sync().pkg
+const pkg = require('../package.json')
 
 program
   .version(pkg.version)
