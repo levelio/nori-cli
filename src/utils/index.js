@@ -1,5 +1,8 @@
+const fs = require('fs')
+const path = require('path')
 const chalk = require('chalk')
 const ncp = require('copy-paste')
+const yaml = require('js-yaml')
 
 /**
  * 将文本复制到剪切板
@@ -25,4 +28,19 @@ exports.Text = {
 
 exports.exit = function () {
   process.exit()
+}
+
+exports.getConf = function () {
+  let externalConf
+  try {
+    externalConf = yaml.safeLoad(
+      fs.readFileSync(
+        path.resolve(process.env.HOME, '.nori.yml'),
+        'utf8'
+      )
+    )
+  } catch (e) {
+    externalConf = null
+  }
+  return externalConf
 }

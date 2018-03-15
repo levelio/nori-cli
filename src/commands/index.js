@@ -1,9 +1,11 @@
 const ip = require('./ip')
 const color = require('./color')
+const site = require('./site')
 
 const commands = [
   ip,
-  color
+  color,
+  site
 ]
 
 module.exports = function (program) {

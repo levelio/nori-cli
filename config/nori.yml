@@ -1,0 +1,25 @@
+# ssh 快捷登录配置
+ssh:
+  -
+   name: server nickname
+   domain: 10.8.8.8
+   port: 22
+   user: hezhiqiang
+   password: qinggannenglixianzuibangle
+
+# 快捷访问网站
+quicksite:
+  -
+    name: 晓宇API查询
+    url: http://10.8.8.8:8800
+  -
+    name: 埋点工具
+    url: http://10.8.8.205
+  -
+    name: 会议室预定
+    url: http://10.8.8.8:3440
+
+# token 生成配置
+token:
+  secret: 'qinggannenglixian666'
+  mongodb: 'mongodb://10.8.8.8:27017/6666'
