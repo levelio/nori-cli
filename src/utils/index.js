@@ -32,6 +32,7 @@ exports.exit = function () {
 
 exports.getConf = function () {
   let externalConf
+  console.log(path.resolve(process.env.HOME, '.nori.yml'))
   try {
     externalConf = yaml.safeLoad(
       fs.readFileSync(
@@ -40,6 +41,7 @@ exports.getConf = function () {
       )
     )
   } catch (e) {
+    console.log(e)
     externalConf = null
   }
   return externalConf

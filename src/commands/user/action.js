@@ -15,7 +15,7 @@ function fetchUser (findKey, value, isAll) {
     users.findOne(
       { [findKey]: value },
       (err, user) => {
-        if (err) {
+        if (err || !user) {
           Text.error('未查找到用户')
           exit()
         }
@@ -46,6 +46,6 @@ module.exports = (options) => {
   } else if (phone) {
     fetchUser('phone', phone, all)
   } else if (userId) {
-    fetchUser('_id', userId, all)
+    fetchUser('_id', mongoose.Types.ObjectId(userId), all)
   }
 }
