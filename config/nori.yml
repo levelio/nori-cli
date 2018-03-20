@@ -20,6 +20,6 @@ quicksite:
     url: http://10.8.8.8:3440
 
 # token 生成配置
-token:
+user:
   secret: 'qinggannenglixian666'
   mongodb: 'mongodb://10.8.8.8:27017/6666'
