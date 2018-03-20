@@ -1,15 +1,12 @@
-const shell = require('shelljs')
-const inquirer = require('inquirer')
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
-const { getConf, exit, Text, copyText } = require('../../utils')
-
+const { getConf, exit, Text } = require('../../utils')
 
 function fetchUser (findKey, value, isAll) {
   const { secret, mongodb } = getConf().user
   mongoose.connect(mongodb)
   const db = mongoose.connection
-  db.on('err', err => {
+  db.on('err', () => {
     Text.error('数据库连接失败，请检查配置文件')
     exit()
   })
@@ -44,8 +41,6 @@ function fetchUser (findKey, value, isAll) {
 
 module.exports = (options) => {
   const { userName, phone, userId, all } = options
-  const { user } = getConf()
-  const { secret, mongodb } = user
   if (userName) {
     fetchUser('name', userName, all)
   } else if (phone) {

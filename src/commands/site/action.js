@@ -1,4 +1,3 @@
-const shell = require('shelljs')
 const inquirer = require('inquirer')
 const opn = require('opn')
 const { getConf, exit, Text, copyText } = require('../../utils')
@@ -14,7 +13,7 @@ function openUrl (data) {
 
 module.exports = (options) => {
   const { quicksite } = getConf()
-  const prompt = inquirer.prompt({
+  inquirer.prompt({
     type: 'rawlist',
     name: 'site',
     message: 'what do you want to do?',
