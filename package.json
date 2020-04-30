@@ -13,8 +13,9 @@
   },
   "scripts": {
     "test": "standard",
-    "prepublish": "npm run test",
-    "postinstall": "node ./npm/install"
+    "prepublish": "npm run snyk-protect && npm run test",
+    "postinstall": "node ./npm/install",
+    "snyk-protect": "snyk protect"
   },
   "standard": {
     "ignore": [
@@ -61,6 +62,8 @@
     "ramda": "^0.25.0",
     "rxjs": "^5.5.6",
     "shelljs": "^0.8.1",
-    "ssh2": "^0.6.0"
-  }
+    "ssh2": "^0.6.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
